@@ -2,7 +2,6 @@ import random
 import tkinter as tk
 from tkinter import messagebox
 
-# Function for the console version
 def console_version():
     number_to_guess = random.randint(1, 100)
     attempts = 10
@@ -27,7 +26,6 @@ def console_version():
     if attempts == 0:
         print(f"Sorry, you're out of attempts! The number was {number_to_guess}.")
 
-# Function for the GUI version
 class NumberGuessingGame:
     def __init__(self, master):
         self.master = master
@@ -70,7 +68,6 @@ class NumberGuessingGame:
             messagebox.showinfo("Game Over", f"Sorry, you're out of attempts! The number was {self.number_to_guess}.")
             self.master.quit()
 
-# Main function to choose between console or GUI
 def main():
     choice = input("Would you like to play in console (C) or GUI (G) mode? ").strip().lower()
     if choice == 'c':
